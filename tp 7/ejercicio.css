@@ -7,48 +7,65 @@
     margin-bottom: 10px;
     padding-top: 20px;
     padding-bottom: 20px;
-    position: relative; top: 0;
+    position: relative;
+    top: 0;
 }
 
-#inserttop{
-    border: 1px solid red;
+#inserttop {
+    border-top: 2px solid red;
+    width: 170px;
 }
 
-#hidebordertop{
-    
+#nav li {
+    display: inline-block;
+    padding: 8px 12px;
+    border: 1px solid gray;
+    width: 60px;
 }
 
-#nav{
-    width: 10%;
+#nav {
+    text-align: center;
+    width: 9%;
     float: left;
     background-color: lightgray;
     border-top: 25px solid black;
     border-bottom: 25px solid black;
     margin-right: 10px;
     padding-top: 50px;
-    padding-bottom: 50px;   
+    padding-bottom: 50px;
 }
 
-#contentinner{
+#contentinner {
+    margin-top: -2px;
+    margin-left: 190px;
+    border-top: 2px solid red;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#clearfooter{
+#clearfooter {
     clear: both;
     height: 0;
     margin: 0;
     padding: 0;
 }
 
-#insertbottom{
-    border: 1px solid red;
-    margin-top: 50px;
+#insertbottom {
+    margin-top: 60px;
+    border-top: 2px solid red;
+    width: 100%;
 }
 
-#footer{
-       color: goldenrod;
+#hideborderbottom {
+    width:20px;
+    border-top: 2px solid white;  
+    margin-left: 9%; /* viene del 10% del nav */
+    margin-top: -2px;
+}
+
+#footer {
+    color: goldenrod;
     width: 98%;
-    float:left;
+    float: left;
     background-color: darkblue;
     border: 2px solid red;
     margin-top: 10px;
