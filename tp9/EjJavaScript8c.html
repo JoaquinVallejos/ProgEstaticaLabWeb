@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>Ej8c</title>
+
+    <script>
+        function detectar() {
+            var $resultado;
+            $resultado=navigator.appName;
+            switch($resultado) {
+                case 'Microsoft Internet Explorer':
+                    document.write($resultado)
+                    window.open('http://www.microsoft.com/ie');
+                    break;
+                    case 'Firefox': 
+                    document.write($resultado)
+                    window.open('http://www.mozilla.com/firefox/');
+                    break;
+                    case 'Konkeror':
+                    document.write($resultado)
+                    window.open('http://konqueror.org');
+                    break;
+                    default:
+                    document.write($resultado);
+                    document.write('<br> Browser desconocido.');
+                    break;
+            }
+        }
+
+    </script>
+</head>
+
+<body onload="detectar()">
+
+
+</body>
+
+</html>
