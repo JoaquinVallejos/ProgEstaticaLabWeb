@@ -1,0 +1,65 @@
+<html>
+<head>
+  <title>Ciudades de Neuquén</title>
+
+   <script>
+    function ocultar($idProv, $idCiud) {
+        var $provincia, $ciudades, $oculto;
+
+        $ciudades=document.getElementById($idCiud);
+        $oculto = $ciudades.style.getPropertyValue('visibility');
+        if ($oculto == ''){
+            $oculto=$ciudades.style.visibility='hidden';
+            $provincia=document.getElementById($idProv);
+            $provincia.style.textDecoration='underline';
+        } else if ($oculto == 'hidden') {
+            $oculto=$ciudades.style.visibility='';
+            $provincia=document.getElementById($idProv);
+            $provincia.style.textDecoration='';
+        }
+    }
+  </script>
+
+</head>
+
+<body>
+
+<ul>
+    <li id="nqn">
+        Neuquen <button onclick="ocultar ('nqn', 'ciudadesNqn')">_</button>
+    <ul id="ciudadesNqn">
+        <li>Neuquen </li>
+        <li>Zapala</li>
+        <li>San Martin</li>
+        <li>Junin</li>
+    </ul>
+</li>
+</ul>
+
+<ul>
+    <li id="rn">
+        Rio Negro <button onclick="ocultar ('rn', 'ciudadesRn')">_</button>
+    <ul id="ciudadesRn">
+        <li>Cipoletti </li>
+        <li>Fernandez Oro</li>
+        <li>Roca</li>
+        <li>Cinco saltos</li>
+        <li>Allen</li>
+    </ul>
+</li>
+</ul>
+
+<ul>
+    <li id="BsAs">
+        Buenos Aires <button onclick="ocultar ('BsAs', 'ciudadesBsAs')">_</button>
+    <ul id="ciudadesBsAs">
+        <li>La Plata </li>
+        <li>Mar del Plata</li>
+        <li>Necochea</li>
+    </ul>
+</li>
+</ul>
+
+
+</body>
+</html>
