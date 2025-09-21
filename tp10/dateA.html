@@ -1,0 +1,24 @@
+<html>
+
+    <head>
+        <title>Date A</title>
+    </head>
+
+    <body>
+
+        <script>
+           var d = new Date();
+           var n = new Date(d.getFullYear(), 11, 25);
+           if(d > n) n = new Date(d.getFullYear() + 1, 11, 25);
+           var dif = n - d;
+
+           var dias = parseInt(dif / 86400000);
+           var horas = parseInt(dif / 3600000 - dias*24);
+           var minutos = parseInt(dif / 60000 - dias*24*60 - horas*60);
+           var segundos = parseInt(dif / 1000 - dias*24*60*60 - horas*60*60 - minutos*60);
+           
+           document.write(d + "<br>Faltan " + dias + " días, " + horas + " horas, " + minutos + " minutos y " + segundos + " segundos para Navidad.");
+        </script>
+
+    </body>
+</html>

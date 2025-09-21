@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title>String</title>
+</head>
+<body>
+    <script>
+       function traducir(mensaje) {
+    var diccionario = {
+        "mi": "my",
+        "hola": "hello",
+        "nombre": "name",
+        "amigo": "friend",
+        "mundo": "world",
+        "gracias": "thanks",
+        "adios": "bye"
+    };
+    var palabras = mensaje.split(" ");
+    for (var i = 0; i < palabras.length; i++) {
+        var palabra = palabras[i];
+        if (diccionario[palabra]) {
+            palabras[i] = diccionario[palabra];
+        }
+    }
+    return palabras.join(" ");
+}
+        var txt=prompt("Ingrese mensaje");
+        document.write(txt.toUpperCase()+"<br>");
+        document.write(txt.toLowerCase()+"<br>");
+        document.write(txt.substr(4,10)+"<br>");
+        if (txt.indexOf("hola")!==-1){
+        document.write("Hola que tal brother" + "<br>");
+        }
+        document.write(txt.replace(/ /g , "")+"<br>");
+        document.write(txt.replace(/hola/gi , "")+"<br>")
+        document.write(traducir(txt));       
+    </script>
+
+</body>
+
+</html>

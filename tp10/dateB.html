@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Date B</title>
+    </head>
+    <body>
+        <script>
+            var d= new Date;
+            var ano = d.getFullYear();
+            function pedir(){
+                var n= parseInt(prompt("Ingrese ano de nacimiento"));
+                var eda = ano-n;
+                document.write("Su edad es "+eda);
+            }
+        </script>
+        <button onclick="pedir()">Calcular edad</button>
+    </body>
+</html>

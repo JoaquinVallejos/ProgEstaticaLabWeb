@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Form</title>
+    <script type="text/javascript">
+        function enviarMensaje() {
+            var nombre = document.getElementById("nombre").value;
+            var mensaje = document.getElementById("mensaje").value;
+            var d = new Date();
+            var fecha = d.getDate() + "/" + (d.getMonth()+ 1) + "/" + d.getFullYear();
+            var hora = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+            document.getElementById("nombre").value = ""
+            document.getElementById("mensaje").value = ""
+            document.getElementById("chat").innerHTML += fecha + " " + hora + " por " + nombre + "<br>" + mensaje + "<br>";;
+        }
+    </script>
+</head>
+<body>
+    <h2>CHAT</h2>
+    <form onsubmit="enviarMensaje(); return false;">
+        Nombre <input type="text" id="nombre"><br>
+        <textarea id="mensaje" rows="4" cols="40"></textarea><br>
+        <input type="submit" value="Enviar Mensaje">
+    </form>
+    <div id="chat"></div>
+</body>
+</html>
